@@ -21,11 +21,11 @@ DOI_LST = dois.rand_dois(doi_lst, 1000)
 
 # try on unpaywall then get new DOI_LST
 DOI_LST = doi_scraper_unpaywall.run(DOI_LST, upw_email)
-print(len(DOI_LST))
+#print(len(DOI_LST))
 
 # try on elsapy then get new DOI_LST
 DOI_LST, titles_for_next = doi_scraper_elsapy.run(DOI_LST)
-print(len(DOI_LST))
+#print(len(DOI_LST))
 
 # try on arXiv
 doi_scraper_arxiv.run(DOI_LST, titles_for_next)
